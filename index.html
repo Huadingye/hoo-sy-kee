@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoo Sy Kee — Everyday Luxury Jewellery | Waterproof &amp; Anti-Tarnish</title>
+<meta name="description" content="Hoo Sy Kee fashion jewellery — waterproof, anti-tarnish necklaces, bracelets, earrings and rings in gold-plated brass and cubic zirconia. Everyday luxury, made to last.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B1712'/%3E%3Cg fill='%23D8C39A'%3E%3Cpath d='M32 14c4 4.4 7.6 6.4 12 6.4v5.2c-4.4 0-8-2-12-6.4-4 4.4-7.6 6.4-12 6.4v-5.2c4.4 0 8-2 12-6.4z'/%3E%3Cpath d='M32 50c-4-4.4-7.6-6.4-12-6.4v-5.2c4.4 0 8 2 12 6.4 4-4.4 7.6-6.4 12-6.4v5.2c-4.4 0-8 2-12 6.4z'/%3E%3Cpath d='M14 32c4.4-4 6.4-7.6 6.4-12h5.2c0 4.4-2 8-6.4 12 4.4 4 6.4 7.6 6.4 12h-5.2c0-4.4-2-8-6.4-12z'/%3E%3Cpath d='M50 32c-4.4 4-6.4 7.6-6.4 12h-5.2c0-4.4 2-8 6.4-12-4.4-4-6.4-7.6-6.4-12h5.2c0 4.4 2 8 6.4 12z'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='4.4' fill='%23A9814B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --ink:#1B1712;
+    --ink-soft:#3A332A;
+    --ivory:#F5F0E6;
+    --ivory-deep:#EAE2D0;
+    --gold:#A9814B;
+    --gold-deep:#8A6530;
+    --gold-soft:#D8C39A;
+    --taupe:#7B7061;
+    --line:rgba(27,23,18,.15);
+    --line-soft:rgba(27,23,18,.09);
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Jost','Segoe UI',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    font-weight:300;
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.7;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{ /* signature gold top edge */
+    content:"";position:fixed;top:0;left:0;right:0;height:3px;
+    background:var(--gold);z-index:400;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
+  ::selection{background:var(--gold-soft);color:var(--ink)}
+
+  /* paper grain — the print feel */
+  .grain{
+    position:fixed;inset:0;z-index:300;pointer-events:none;
+    opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* ---------- brand marquee ---------- */
+  .marquee{
+    background:var(--ink);color:#CBBFA9;
+    border-bottom:1px solid rgba(245,240,230,.14);
+    overflow:hidden;padding:11px 0;
+  }
+  .marquee-track{
+    display:inline-flex;white-space:nowrap;width:max-content;
+    animation:slide 38s linear infinite;
+  }
+  .marquee-track span{
+    display:inline-flex;align-items:center;
+    font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
+    padding-right:72px;
+  }
+  .marquee-track i{font-style:normal;color:var(--gold-soft);margin-right:72px}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  /* ---------- header ---------- */
+  header.site{
+    border-bottom:1px solid var(--line);
+    background:rgba(245,240,230,.97);
+    position:sticky;top:0;z-index:100;
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .wordmark{
+    font-family:var(--serif);font-weight:600;
+    font-size:27px;letter-spacing:.16em;text-transform:uppercase;
+  }
+  .wordmark span{color:var(--gold-deep)}
+  .nav-links{display:flex;gap:38px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  .nav-links a{position:relative;padding:6px 0}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:0;height:1px;width:0;
+    background:var(--gold);transition:width .4s cubic-bezier(.22,1,.36,1);
+  }
+  .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+  .nav-links a.active{color:var(--gold-deep)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:84px 0 96px;position:relative}
+  .hero-inner{
+    display:grid;grid-template-columns:1.08fr .92fr;
+    gap:70px;align-items:center;
+  }
+  .hero-kicker{
+    display:flex;align-items:center;gap:14px;
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);
+    margin-bottom:28px;
+  }
+  .hero-kicker::before{content:"";width:46px;height:1px;background:var(--gold)}
+  h1{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(50px,6.6vw,86px);
+    line-height:1.02;letter-spacing:.005em;text-wrap:balance;
+    margin-bottom:30px;
+  }
+  .lede{
+    font-size:16.5px;color:var(--taupe);
+    max-width:44ch;margin-bottom:42px;
+  }
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:16px 36px;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    border:1px solid var(--ink);transition:all .35s ease;
+  }
+  .btn-solid{background:var(--ink);color:var(--ivory)}
+  .btn-solid:hover{background:var(--gold-deep);border-color:var(--gold-deep)}
+  .btn-ghost:hover{background:var(--ink);color:var(--ivory)}
+
+  /* entrance choreography — one moment only */
+  .rise>*{transform:translateY(28px);opacity:0;animation:rise .85s cubic-bezier(.22,1,.36,1) forwards}
+  @keyframes rise{to{transform:none;opacity:1}}
+  .hero-frame{animation:frameIn 1.05s cubic-bezier(.22,1,.36,1) .18s both}
+  @keyframes frameIn{from{opacity:0;transform:scale(.975)}to{opacity:1;transform:none}}
+
+  /* hero composition */
+  .hero-media{position:relative}
+  .hero-frame{
+    position:relative;padding:22px;background:var(--ivory-deep);
+    border:1px solid var(--line);
+  }
+  .hero-frame::after{
+    content:"";position:absolute;inset:9px;
+    border:1px solid rgba(138,101,48,.4);pointer-events:none;
+  }
+  .hero-frame img{
+    width:100%;aspect-ratio:1/1;object-fit:cover;
+    background:#fff;position:relative;z-index:1;
+  }
+  .corner{position:absolute;width:26px;height:26px;border:1px solid var(--gold);z-index:2}
+  .corner.tl{top:-2px;left:-2px;border-right:0;border-bottom:0}
+  .corner.tr{top:-2px;right:-2px;border-left:0;border-bottom:0}
+  .corner.bl{bottom:-2px;left:-2px;border-right:0;border-top:0}
+  .corner.br{bottom:-2px;right:-2px;border-left:0;border-top:0}
+  .hero-caption{
+    position:absolute;left:34px;bottom:-20px;z-index:3;
+    background:var(--ink);color:var(--ivory);
+    font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+    padding:11px 20px;
+  }
+  .float-img{
+    position:absolute;left:-66px;bottom:-58px;z-index:4;
+    width:196px;border:7px solid var(--ivory);
+    box-shadow:0 24px 50px rgba(27,23,18,.22);
+    transform:translateZ(0);
+  }
+  .float-img img{aspect-ratio:1/1;object-fit:cover;background:#fff}
+  .medallion{
+    position:absolute;top:-30px;right:-14px;z-index:4;
+    width:104px;height:104px;border-radius:50%;
+    border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:5px;
+    background:var(--ivory);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    line-height:1.2;text-align:center;
+  }
+  .medallion b{
+    font-family:var(--serif);font-style:italic;font-weight:500;
+    font-size:23px;color:var(--gold-deep);
+  }
+  .medallion small{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--taupe);margin-top:2px}
+  .scroll-cue{
+    position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:8px;
+    font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--taupe);
+  }
+  .scroll-cue::after{content:"";width:1px;height:44px;background:var(--gold-soft)}
+
+  /* ---------- section base ---------- */
+  section{padding:96px 0}
+  .sec-head{margin-bottom:60px;max-width:640px}
+  .sec-label{
+    display:flex;align-items:center;gap:14px;
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);
+    margin-bottom:20px;
+  }
+  .sec-label::before{content:"";width:46px;height:1px;background:var(--gold)}
+  .sec-head h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(36px,4.2vw,54px);line-height:1.06;text-wrap:balance;
+    margin-bottom:14px;
+  }
+  .orn{display:flex;align-items:center;gap:16px;margin:20px 0 18px}
+  .orn span{flex:1;height:1px;background:var(--line)}
+  .orn i{font-style:normal;color:var(--gold);font-size:13px}
+  .sec-head p.sub{color:var(--taupe);max-width:56ch;font-size:15.5px}
+
+  /* ---------- featured product ---------- */
+  .featured{
+    display:grid;grid-template-columns:1fr 1fr;
+    border:1px solid var(--line);background:var(--ivory-deep);
+    margin-bottom:70px;
+  }
+  .featured-media{position:relative;padding:26px}
+  .featured-media .frame{position:relative;height:100%}
+  .featured-media .frame::after{
+    content:"";position:absolute;inset:8px;
+    border:1px solid rgba(138,101,48,.35);pointer-events:none;
+  }
+  .featured-media img{width:100%;height:100%;object-fit:cover;background:#fff;position:relative;z-index:1}
+  .featured-copy{padding:60px 56px;display:flex;flex-direction:column;justify-content:center}
+  .overline{
+    font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);
+    margin-bottom:16px;
+  }
+  .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+  .tag{
+    font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+    padding:6px 14px;
+  }
+  .tag.solid{background:var(--gold);border:1px solid var(--gold);color:var(--ivory)}
+  .tag.ghost{border:1px solid var(--gold);color:var(--gold-deep)}
+  .featured-copy h3{
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(30px,3vw,40px);line-height:1.1;text-wrap:balance;
+    margin-bottom:10px;
+  }
+  .listing{
+    font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--taupe);
+    border-left:2px solid var(--gold-soft);padding-left:14px;
+    margin-bottom:22px;line-height:1.5;
+  }
+  .featured-copy .desc{color:var(--ink-soft);font-size:15px;margin-bottom:30px}
+  .bullets{list-style:none;border-top:1px solid var(--line)}
+  .bullets li{
+    padding:12px 0 12px 36px;position:relative;
+    border-bottom:1px solid var(--line-soft);
+    font-size:14.5px;color:var(--ink-soft);
+  }
+  .bullets li::before{
+    content:"✦";position:absolute;left:4px;top:10px;
+    color:var(--gold);font-size:13px;
+  }
+
+  /* ---------- product grid ---------- */
+  .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+  .card{
+    background:var(--ivory);border:1px solid var(--line);
+    transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease,border-color .4s ease;
+    cursor:pointer;
+  }
+  .card:hover,.card:focus-visible{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+    box-shadow:0 26px 60px rgba(27,23,18,.12);
+  }
+  .card figure{position:relative;overflow:hidden;background:var(--ivory-deep);padding:10px}
+  .card figure img{
+    width:100%;aspect-ratio:4/5;object-fit:cover;
+    background:#fff;border:1px solid rgba(27,23,18,.07);
+    transition:transform .8s cubic-bezier(.22,1,.36,1);
+  }
+  .card:hover figure img{transform:scale(1.045)}
+  .card figure img.inset{
+    position:absolute;right:16px;bottom:16px;
+    width:72px;height:72px;border:3px solid var(--ivory);
+    box-shadow:0 10px 24px rgba(27,23,18,.28);
+    z-index:2;
+  }
+  .view-hint{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    background:rgba(27,23,18,.9);color:var(--ivory);
+    font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+    padding:13px;display:flex;justify-content:center;align-items:center;gap:10px;
+    transform:translateY(101%);transition:transform .4s cubic-bezier(.22,1,.36,1);
+  }
+  .view-hint svg{width:13px;height:13px;stroke:var(--gold-soft);transition:transform .3s ease}
+  .card:hover .view-hint,.card:focus-visible .view-hint{transform:none}
+  .card:hover .view-hint svg{transform:translateX(4px)}
+  .card-body{padding:24px 24px 28px}
+  .card-body .cat{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe);margin-bottom:12px}
+  .card-body h3{
+    font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.22;
+    text-wrap:balance;margin-bottom:10px;
+    transition:color .3s ease;
+  }
+  .card:hover .card-body h3{color:var(--gold-deep)}
+  .card-body .listing{
+    font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--taupe);
+    line-height:1.45;border-left:0;padding-left:0;margin-bottom:16px;
+  }
+  .card-meta{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    border:1px solid var(--gold-soft);color:var(--gold-deep);
+    background:transparent;padding:4px 11px;
+  }
+
+  /* ---------- difference ---------- */
+  .diff{background:var(--ivory-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .diff-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+  .diff-item{padding:8px 26px 8px 30px;border-left:1px solid var(--line)}
+  .diff-item:first-child{border-left:0;padding-left:4px}
+  .ic{
+    width:56px;height:56px;border:1px solid var(--gold);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-bottom:24px;
+  }
+  .ic svg{width:23px;height:23px;stroke:var(--gold-deep)}
+  .diff-item h3{
+    font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.18;
+    text-wrap:balance;margin-bottom:10px;
+  }
+  .diff-item p{font-size:13px;color:var(--taupe)}
+
+  /* ---------- craft ---------- */
+  .craft{background:var(--ink);color:var(--ivory)}
+  .craft .sec-label{color:var(--gold-soft)}
+  .craft .sec-label::before{background:var(--gold-soft)}
+  .craft h2{color:var(--ivory)}
+  .creed{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(30px,3.6vw,46px);line-height:1.25;
+    max-width:22ch;color:#EFE6D2;margin:8px 0 44px;
+  }
+  .creed::before,.creed::after{content:"✦";color:var(--gold);font-size:15px;vertical-align:6px;margin:0 6px}
+  .craft-story{
+    font-size:15.5px;color:#B9AC97;max-width:60ch;
+    border-left:2px solid rgba(216,195,154,.4);padding-left:22px;margin-bottom:64px;
+  }
+  .materials{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;border-top:1px solid rgba(245,240,230,.14);padding-top:50px}
+  .mat h3{font-family:var(--serif);font-weight:600;font-size:22px;margin-bottom:10px;color:var(--gold-soft)}
+  .mat p{font-size:13px;color:#B9AC97}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:64px 0 40px;background:var(--ivory)}
+  .foot-top{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+  .foot-brand{font-family:var(--serif);font-weight:600;font-size:34px;letter-spacing:.2em;text-transform:uppercase}
+  .foot-brand span{color:var(--gold-deep)}
+  .foot-tag{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--taupe)}
+  .foot-line{display:flex;align-items:center;gap:16px;margin:34px 0 26px}
+  .foot-line span{flex:1;height:1px;background:var(--line)}
+  .foot-line i{font-style:normal;color:var(--gold);font-size:12px}
+  .foot-legal{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:11px;letter-spacing:.1em;color:var(--taupe);
+  }
+  .to-top{
+    letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);
+    transition:color .3s ease;display:inline-block;padding:12px 0;min-height:44px;line-height:1.2;
+  }
+  .to-top:hover{color:var(--ink)}
+
+  /* ---------- modal ---------- */
+  .modal{
+    position:fixed;inset:0;z-index:500;
+    background:rgba(20,16,11,.68);
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;
+  }
+  .modal.open{opacity:1;visibility:visible}
+  .modal-card{
+    background:var(--ivory);max-width:880px;width:100%;
+    display:grid;grid-template-columns:1fr 1fr;
+    max-height:88vh;overflow:auto;position:relative;
+    border:1px solid rgba(245,240,230,.4);
+  }
+  .modal-imgs{background:var(--ivory-deep);padding:20px}
+  .modal-imgs .mframe{background:#fff;border:1px solid rgba(27,23,18,.08);padding:8px}
+  .modal-imgs .mframe img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .modal-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .modal-thumbs .mframe{padding:5px;cursor:pointer}
+  .modal-thumbs .mframe.sel{outline:2px solid var(--gold);outline-offset:-2px}
+  .modal-thumbs .mframe img{aspect-ratio:1/1}
+  .modal-body{padding:46px 42px;display:flex;flex-direction:column;justify-content:center}
+  .modal-body .cat{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px}
+  .modal-body h3{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.2;text-wrap:balance;margin-bottom:18px}
+  .modal-close{
+    position:absolute;top:14px;right:14px;z-index:6;
+    width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line);background:var(--ivory);
+    color:var(--ink);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:all .25s ease;
+  }
+  .modal-close:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+  body.no-scroll{overflow:hidden}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1080px){
+    .product-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+    .diff-grid{grid-template-columns:repeat(3,1fr);gap:30px 0}
+    .diff-item{border-left:0;padding:0 24px 0 0}
+    .materials{grid-template-columns:repeat(2,1fr)}
+    .hero-inner{grid-template-columns:1fr;gap:60px}
+    .float-img{left:-20px;bottom:-40px;width:150px}
+    .featured{grid-template-columns:1fr}
+    .modal-card{grid-template-columns:1fr;max-width:540px}
+  }
+  @media (max-width:680px){
+    .nav-links{display:none}
+    .nav{height:68px}
+    .hero{padding:56px 0 76px}
+    section{padding:68px 0}
+    .product-grid{grid-template-columns:1fr}
+    .diff-grid{grid-template-columns:1fr}
+    .materials{grid-template-columns:1fr}
+    .featured-copy{padding:38px 28px}
+    .modal-body{padding:36px 26px}
+    .medallion{width:84px;height:84px;top:-22px;right:-6px}
+    .medallion b{font-size:19px}
+    .float-img{display:none}
+    .scroll-cue{display:none}
+    .hero-caption{left:8px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    html{scroll-behavior:auto}
+    .rise>*,.hero-frame{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Waterproof &amp; Anti-Tarnish<i>✦</i>Affordable Everyday Luxury<i>✦</i>Hoo Sy Kee Brand Packaging<i>✦</i>Suitable for Every Occasion<i>✦</i>Perfect for Daily Wear<i>✦</i></span>
+    <span>Waterproof &amp; Anti-Tarnish<i>✦</i>Affordable Everyday Luxury<i>✦</i>Hoo Sy Kee Brand Packaging<i>✦</i>Suitable for Every Occasion<i>✦</i>Perfect for Daily Wear<i>✦</i></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top" class="wordmark">Hoo Sy Kee<span>.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#collection" data-sec="collection">The Collection</a>
+      <a href="#difference" data-sec="difference">Why Hoo Sy Kee</a>
+      <a href="#craft" data-sec="craft">Our Craft</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="hero-kicker rise" style="animation-delay:.05s">Fine Fashion Jewellery · New Collection</p>
+      <h1 class="rise" style="animation-delay:.14s">Everyday luxury,<br>made to last.</h1>
+      <p class="lede rise" style="animation-delay:.24s">Waterproof, anti-tarnish jewellery in gold-plated brass and cubic zirconia. Five pieces designed for every day, finished with the care of fine jewellery.</p>
+      <div class="hero-cta rise" style="animation-delay:.34s">
+        <a href="#collection" class="btn btn-solid">Explore the Collection</a>
+        <a href="#craft" class="btn btn-ghost">Our Craft</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-frame">
+        <img src="assets/necklace-four-leaf-clover.jpg" alt="Hoo Sy Kee Four Leaf Clover Pendant Necklace for Women">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      </div>
+      <figure class="float-img">
+        <img src="assets/earrings-pearl.jpg" alt="Hoo Sy Kee Elegant Pearl Earrings for Women">
+      </figure>
+      <div class="medallion"><b>Lucky</b><small>Every Day</small></div>
+      <p class="hero-caption">Four Leaf Clover Pendant · Gold Plated Brass &amp; CZ</p>
+    </div>
+  </div>
+  <p class="scroll-cue">Scroll</p>
+</section>
+
+<!-- ===== COLLECTION ===== -->
+<section id="collection">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">The Collection</p>
+      <h2>Five pieces, one signature.</h2>
+      <div class="orn"><span></span><i>✦</i><span></span></div>
+      <p class="sub">Every Hoo Sy Kee piece is finished to the same standard — waterproof, anti-tarnish, and wrapped in brand packaging, ready for every day and every occasion.</p>
+    </div>
+
+    <article class="featured">
+      <div class="featured-media">
+        <div class="frame">
+          <img src="assets/necklace-four-leaf-clover.jpg" alt="Hoo Sy Kee Four Leaf Clover Pendant Necklace for Women | Gold Plated Brass CZ, Waterproof &amp; Anti-Tarnish">
+        </div>
+      </div>
+      <div class="featured-copy">
+        <p class="overline">From the Collection — Necklace</p>
+        <div class="tag-row">
+          <span class="tag solid">Best Seller</span>
+          <span class="tag ghost">Waterproof &amp; Anti-Tarnish</span>
+        </div>
+        <h3>Four Leaf Clover Pendant Necklace</h3>
+        <p class="listing">Hoo Sy Kee Four Leaf Clover Pendant Necklace for Women | Gold Plated Brass CZ, Waterproof &amp; Anti-Tarnish</p>
+        <p class="desc">A dainty clover pendant that carries the luck of four leaves with you — finished bright, and made to stay that way.</p>
+        <ul class="bullets">
+          <li>Waterproof and anti tarnish jewellery</li>
+          <li>Affordable everyday luxury</li>
+          <li>Comes in brand packaging</li>
+          <li>Suitable for every occasion</li>
+          <li>Perfect for daily wear</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="product-grid">
+
+      <article class="card" data-pid="rotating" tabindex="0" role="button" aria-label="View details of Rotating Four Leaf Clover Pendant Necklace">
+        <figure>
+          <img src="assets/necklace-rotating-clover.jpg" alt="Hoo Sy Kee Rotating Four Leaf Clover Pendant Necklace for Women">
+          <span class="view-hint">View Details<svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </figure>
+        <div class="card-body">
+          <p class="cat">Jewellery — Necklace</p>
+          <h3>Rotating Four Leaf Clover Pendant Necklace</h3>
+          <p class="listing">Hoo Sy Kee Rotating Four Leaf Clover Pendant Necklace for Women | 18K Gold Plated Brass CZ, Waterproof &amp; Anti-Tarnish</p>
+          <div class="card-meta">
+            <span class="chip">18K Gold Plated Brass</span>
+            <span class="chip">CZ</span>
+            <span class="chip">Waterproof</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-pid="bracelet" tabindex="0" role="button" aria-label="View details of Wizard of Oz Openwork Bracelet">
+        <figure>
+          <img src="assets/bracelet-wizard-of-oz.jpg" alt="Hoo Sy Kee Wizard of Oz Openwork Bracelet for Women">
+          <img class="inset" src="assets/bracelet-detail.jpg" alt="Hoo Sy Kee Wizard of Oz Openwork Bracelet for Women — detail view">
+          <span class="view-hint">View Details<svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </figure>
+        <div class="card-body">
+          <p class="cat">Jewellery — Bracelet</p>
+          <h3>Wizard of Oz Openwork Bracelet</h3>
+          <p class="listing">Hoo Sy Kee Wizard of Oz Openwork Bracelet for Women | Gold Plated Brass Green CZ, Waterproof &amp; Anti-Tarnish</p>
+          <div class="card-meta">
+            <span class="chip">Gold Plated Brass</span>
+            <span class="chip">Green CZ</span>
+            <span class="chip">Waterproof</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-pid="earrings" tabindex="0" role="button" aria-label="View details of Elegant Pearl Earrings">
+        <figure>
+          <img src="assets/earrings-pearl.jpg" alt="Hoo Sy Kee Elegant Pearl Earrings for Women">
+          <span class="view-hint">View Details<svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </figure>
+        <div class="card-body">
+          <p class="cat">Jewellery — Earrings</p>
+          <h3>Elegant Pearl Earrings</h3>
+          <p class="listing">Hoo Sy Kee Elegant Pearl Earrings for Women | 999 Silver Post, Waterproof &amp; Anti-Tarnish</p>
+          <div class="card-meta">
+            <span class="chip">999 Silver Post</span>
+            <span class="chip">Pearl</span>
+            <span class="chip">Anti-Tarnish</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-pid="ring" tabindex="0" role="button" aria-label="View details of Sparkling Starry Ring">
+        <figure>
+          <img src="assets/ring-starry.jpg" alt="Hoo Sy Kee Sparkling Starry Ring for Women">
+          <span class="view-hint">View Details<svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </figure>
+        <div class="card-body">
+          <p class="cat">Jewellery — Ring</p>
+          <h3>Sparkling Starry Ring</h3>
+          <p class="listing">Hoo Sy Kee Sparkling Starry Ring for Women | 18K Gold Plated Brass Green CZ, Waterproof &amp; Anti-Tarnish</p>
+          <div class="card-meta">
+            <span class="chip">18K Gold Plated Brass</span>
+            <span class="chip">Green CZ</span>
+            <span class="chip">Waterproof</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIFFERENCE ===== -->
+<section class="diff" id="difference">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">Why Hoo Sy Kee</p>
+      <h2>Made for real life.</h2>
+      <div class="orn"><span></span><i>✦</i><span></span></div>
+      <p class="sub">Five promises behind every piece in the collection.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 5 6 7.5 6 10.2A6 6 0 0 1 6 13.2C6 10.5 8 8 12 3z"/><path d="M9.5 15a2.7 2.7 0 0 0 2.5 2.7"/></svg></div>
+        <h3>Waterproof &amp; Anti-Tarnish</h3>
+        <p>Wear it through rain, sweat and everyday wear — a protective finish that keeps its bright, polished look.</p>
+      </div>
+      <div class="diff-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.4 5.9.7-4.4 4 1.2 5.9L12 16.1 6.8 19l1.2-5.9-4.4-4 5.9-.7L12 3z"/></svg></div>
+        <h3>Affordable Everyday Luxury</h3>
+        <p>A fine-jewellery finish at a price meant for wearing every day — not saving for special occasions.</p>
+      </div>
+      <div class="diff-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l-8-4-8 4v10l8 4 8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg></div>
+        <h3>Brand Packaging</h3>
+        <p>Each piece arrives in Hoo Sy Kee brand packaging — gift-ready from the moment it reaches you.</p>
+      </div>
+      <div class="diff-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M9 15l2 2 4-4.5"/></svg></div>
+        <h3>Suitable for Every Occasion</h3>
+        <p>From desk to dinner, casual to formal — pieces that sit naturally with any outfit.</p>
+      </div>
+      <div class="diff-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <h3>Perfect for Daily Wear</h3>
+        <p>Lightweight, comfortable and built for repeated wear — jewellery you can forget you're wearing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CRAFT ===== -->
+<section class="craft" id="craft">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">Our Craft</p>
+      <h2>Jewellery to live in, not to keep in a box.</h2>
+    </div>
+    <blockquote class="creed">Crafted to be worn, not kept.</blockquote>
+    <p class="craft-story">Hoo Sy Kee is a fashion jewellery house devoted to everyday luxury. Each piece is made from gold-plated brass and precision-cut cubic zirconia, finished with a waterproof, anti-tarnish coating — so the pieces you love can stay with you, day after day. Every order arrives in Hoo Sy Kee brand packaging, ready to give or to keep.</p>
+    <div class="materials">
+      <div class="mat">
+        <h3>Gold-Plated Brass</h3>
+        <p>A warm, lasting gold finish over a sturdy brass base — the weight and shine of fine jewellery.</p>
+      </div>
+      <div class="mat">
+        <h3>Cubic Zirconia</h3>
+        <p>Precision-cut stones with real brilliance, set to catch the light from every angle.</p>
+      </div>
+      <div class="mat">
+        <h3>999 Silver Posts</h3>
+        <p>Comfort-first, skin-friendly silver posts on our earrings, chosen for sensitive wearers.</p>
+      </div>
+      <div class="mat">
+        <h3>Anti-Tarnish Finish</h3>
+        <p>Waterproof and anti-tarnish protection, so your pieces keep their polish through real life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">Hoo Sy Kee<span>.</span></div>
+      <p class="foot-tag">Everyday Luxury · Made to Last</p>
+    </div>
+    <div class="foot-line"><span></span><i>✦</i><span></span></div>
+    <div class="foot-legal">
+      <span>© 2026 Hoo Sy Kee. All rights reserved.</span>
+      <a href="#top" class="to-top">Back to Top</a>
+      <span>Gold-Plated Brass · Cubic Zirconia · 999 Silver · Waterproof &amp; Anti-Tarnish</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== PRODUCT MODAL ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close" aria-label="Close"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <div class="modal-imgs">
+      <div class="mframe"><img id="modal-main" src="" alt="Product detail"></div>
+      <div class="modal-thumbs" id="modal-thumbs"></div>
+    </div>
+    <div class="modal-body">
+      <p class="cat" id="modal-cat"></p>
+      <h3 id="modal-title"></h3>
+      <div class="card-meta" id="modal-meta" style="margin-bottom:26px"></div>
+      <ul class="bullets" id="modal-bullets"></ul>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var BULLETS = [
+    "Waterproof and anti tarnish jewellery",
+    "Affordable everyday luxury",
+    "Comes in brand packaging",
+    "Suitable for every occasion",
+    "Perfect for daily wear"
+  ];
+  var PRODUCTS = {
+    rotating: {
+      title: "Hoo Sy Kee Rotating Four Leaf Clover Pendant Necklace for Women",
+      cat: "Jewellery — Necklace",
+      chips: ["18K Gold Plated Brass", "CZ", "Waterproof & Anti-Tarnish"],
+      images: ["assets/necklace-rotating-clover.jpg"]
+    },
+    bracelet: {
+      title: "Hoo Sy Kee Wizard of Oz Openwork Bracelet for Women",
+      cat: "Jewellery — Bracelet",
+      chips: ["Gold Plated Brass", "Green CZ", "Waterproof & Anti-Tarnish"],
+      images: ["assets/bracelet-wizard-of-oz.jpg", "assets/bracelet-detail.jpg"]
+    },
+    earrings: {
+      title: "Hoo Sy Kee Elegant Pearl Earrings for Women",
+      cat: "Jewellery — Earrings",
+      chips: ["999 Silver Post", "Pearl", "Anti-Tarnish"],
+      images: ["assets/earrings-pearl.jpg"]
+    },
+    ring: {
+      title: "Hoo Sy Kee Sparkling Starry Ring for Women",
+      cat: "Jewellery — Ring",
+      chips: ["18K Gold Plated Brass", "Green CZ", "Waterproof & Anti-Tarnish"],
+      images: ["assets/ring-starry.jpg"]
+    }
+  };
+
+  /* ---------- modal ---------- */
+  var modal = document.getElementById("modal");
+  var mainImg = document.getElementById("modal-main");
+  var thumbs = document.getElementById("modal-thumbs");
+  var curImages = [];
+  var curIndex = 0;
+
+  function setMain(i){
+    curIndex = i;
+    mainImg.src = curImages[i];
+    var t = thumbs.querySelectorAll(".mframe");
+    for (var k = 0; k < t.length; k++) t[k].classList.toggle("sel", k === i);
+  }
+
+  function openModal(pid){
+    var p = PRODUCTS[pid];
+    if (!p) return;
+    curImages = p.images;
+    document.getElementById("modal-cat").textContent = p.cat;
+    document.getElementById("modal-title").textContent = p.title;
+    var meta = document.getElementById("modal-meta");
+    meta.innerHTML = "";
+    p.chips.forEach(function(c){
+      var s = document.createElement("span");
+      s.className = "chip";
+      s.textContent = c;
+      meta.appendChild(s);
+    });
+    var list = document.getElementById("modal-bullets");
+    list.innerHTML = "";
+    BULLETS.forEach(function(b){
+      var li = document.createElement("li");
+      li.textContent = b;
+      list.appendChild(li);
+    });
+    thumbs.innerHTML = "";
+    p.images.forEach(function(src, i){
+      var f = document.createElement("div");
+      f.className = "mframe";
+      var img = document.createElement("img");
+      img.src = src;
+      img.alt = p.title + " view " + (i + 1);
+      f.appendChild(img);
+      f.addEventListener("click", function(){ setMain(i); });
+      thumbs.appendChild(f);
+    });
+    setMain(0);
+    modal.classList.add("open");
+    document.body.classList.add("no-scroll");
+  }
+
+  function closeModal(){
+    modal.classList.remove("open");
+    document.body.classList.remove("no-scroll");
+  }
+
+  document.querySelectorAll(".card").forEach(function(card){
+    card.addEventListener("click", function(){ openModal(card.getAttribute("data-pid")); });
+    card.addEventListener("keydown", function(e){
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openModal(card.getAttribute("data-pid"));
+      }
+    });
+  });
+
+  document.getElementById("modal-close").addEventListener("click", closeModal);
+  modal.addEventListener("click", function(e){
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") closeModal();
+  });
+
+  /* ---------- nav active state ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var byId = {};
+  links.forEach(function(a){ byId[a.getAttribute("data-sec")] = a; });
+  var navObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting && byId[en.target.id]) {
+        links.forEach(function(a){ a.classList.toggle("active", a === byId[en.target.id]); });
+      }
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  ["collection", "difference", "craft"].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) navObs.observe(el);
+  });
+
+  /* ---------- subtle hero parallax ---------- */
+  var floatImg = document.querySelector(".float-img");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ticking = false;
+  function onScroll(){
+    if (reduceMotion || !floatImg) return;
+    var wide = window.innerWidth > 1080;
+    if (!wide) { floatImg.style.transform = ""; return; }
+    if (!ticking) {
+      window.requestAnimationFrame(function(){
+        var hero = document.querySelector(".hero");
+        var rect = hero.getBoundingClientRect();
+        var p = Math.min(Math.max(-rect.top, 0), 420);
+        floatImg.style.transform = "translateY(" + (p * -0.12).toFixed(1) + "px)";
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
+</script>
+</body>
+</html>
